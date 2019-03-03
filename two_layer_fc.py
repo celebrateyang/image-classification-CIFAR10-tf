@@ -7,7 +7,7 @@ from __future__ import print_function
 import tensorflow as tf
 import numpy as np
 
-
+# 使我们从输入数据到类分数
 def inference(images, image_pixels, hidden_units, classes, reg_constant=0):
   '''Build the model up to where it may be used for inference.
 
@@ -22,7 +22,7 @@ def inference(images, image_pixels, hidden_units, classes, reg_constant=0):
       logits: Output tensor containing the computed logits.
   '''
 
-  # Layer 1
+  # Layer 1 第一层和softmax一样
   with tf.variable_scope('Layer1'):
     # Define the variables
     weights = tf.get_variable(
@@ -56,7 +56,7 @@ def inference(images, image_pixels, hidden_units, classes, reg_constant=0):
 
   return logits
 
-
+# 从类分数中计算损失值
 def loss(logits, labels):
   '''Calculates the loss from logits and labels.
 
@@ -83,7 +83,7 @@ def loss(logits, labels):
 
   return loss
 
-
+# 执行单个训练步骤
 def training(loss, learning_rate):
   '''Sets up the training operation.
 
@@ -107,7 +107,7 @@ def training(loss, learning_rate):
 
   return train_step
 
-
+# 计算网络的精度
 def evaluation(logits, labels):
   '''Evaluates the quality of the logits at predicting the label.
 

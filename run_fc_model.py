@@ -24,7 +24,7 @@ flags.DEFINE_string('train_dir', 'tf_logs',
   'Directory to put the training data.')
 flags.DEFINE_float('reg_constant', 0.1, 'Regularization constant.')
 
-FLAGS._parse_flags()
+FLAGS.flag_values_dict()
 print('\nParameters:')
 for attr, value in sorted(FLAGS.__flags.items()):
   print('{} = {}'.format(attr, value))
