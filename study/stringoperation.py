@@ -45,3 +45,9 @@ print(changestring.getvalue())
 # 比较运算符 可以连用
 m=4
 print(1<m<10)
+# 乘法操作,实现复制
+mul = 'gua'
+print(mul*3)
+mul1 = [3,4,5]
+print(mul1*3)
+
