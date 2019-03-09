@@ -19,7 +19,7 @@ x=3.56
 print(round(x,1))
 x+=1
 print(x)
-# 时间
+# 时间,距离19700101的时间
 print(time.time()//(3600*24*365))
 # 逻辑运算 not or and
 print(True and False)
